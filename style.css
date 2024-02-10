@@ -1,0 +1,127 @@
+body{
+    background-color: rgb(28, 3, 36);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+*, root:{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: antialiased;
+    -webtik-text-size-adjust: 100%;
+}
+
+main{
+    padding: 20px;
+    max-width: 640px;
+    margin: 0 auto 64px;
+    background-color: brown;
+}
+
+header{
+    margin-top: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid white;
+}
+
+header h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+}
+
+
+#quiz{
+    counter-reset: quiz-item;
+}
+.quiz-perguntas{
+
+    margin-top: 24px;
+    border: 1px solid rgb(108, 11, 164);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.quiz-perguntas h3{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 20px;
+    background-color: #702870;
+}
+
+.quiz-perguntas h3::before{
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+    background-color: rgb(68, 10, 91);
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.quiz-perguntas dl{
+    padding: 20px 24px;
+    display: grid;
+    gap: 8px;
+}
+
+.quiz-perguntas dl dt{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input{
+    all: unset;
+    border: 1px solid #8e598d;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+input:checked{
+    border: 1px solid #844984;
+}
+
+input:checked::before{
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: #702870;
+    border-radius: 50%;
+}
+
+#acertos{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #452345f1;
+    width: 100%;
+    height: 50px;
+}
